@@ -38,14 +38,23 @@ class SistemaEscolar {
             System.out.println("Nota: ");
             double nota = ler.nextDouble();
 
+            // --> CORREÇÃO --> add para limpar o 'Enter' deixado pelo nextDouble()
+            // garantindo q na próxima volta do loop o nextLine() do "Nome" funcione corretamente.
+            ler.nextLine();
+
             // 3.1 --> criando o objeto usando o CONSTRUTOR e guardando na posição do array
             listaAlunos[i] = new Aluno(nome, idade, nota);
         }
 
+        // variáveis contadoras para estatísticas
+        int totalAprovados = 0;
+        int totalRecuperacao = 0;
+        int totalReprovados = 0;
+
         // exibir o relatório final
-        System.out.printf("\n==========================");
-        System.out.printf(" Relatório de Alunos ");
-        System.out.printf("\n==========================");
+        System.out.println("\n==========================");
+        System.out.println(" Relatório de Alunos ");
+        System.out.println("\n==========================");
 
         // percorrendo o array de alunos
         for (int i = 0; i < listaAlunos.length; i++) {
@@ -58,13 +67,27 @@ class SistemaEscolar {
             // 3.2 Condicionais --> if, else if, else
             if (a.nota >= 7.0) {
                 System.out.println("Situação: APROVADO(A)");
+                totalAprovados++; // conta mais um aprovado
             } else if (a.nota >= 5.0) {
                 System.out.println("Situação: RECUPERAÇÃO");
+                totalRecuperacao++; // conta mais um em recuperação
             } else {
                 System.out.println("Situação: REPROVADO(A)");
+                totalReprovados++; // conta mais um reprovado
             }
             System.out.println("---------------------------------------");
         }
+
+        // Exibindo o resumo geral
+        System.out.println("\n==========================");
+        System.out.println("     Resumo Geral da Turma      ");
+        System.out.println("==========================");
+        System.out.println("Total de alunos cadastrados: " + listaAlunos.length);
+        System.out.println("Total de aprovados: " + totalAprovados);
+        System.out.println("Total em recuperação: " + totalRecuperacao);
+        System.out.println("Total de reprovados: " + totalReprovados);
+        System.out.println("==========================");
+
         ler.close();
     }
 }
