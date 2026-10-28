@@ -1,4 +1,4 @@
-package Aula02;
+package ParteI.Aula02;
 
 public class FilaBanco {
     // Declaração do Array

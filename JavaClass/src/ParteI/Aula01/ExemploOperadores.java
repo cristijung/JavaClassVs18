@@ -1,4 +1,4 @@
-package Aula01;
+package ParteI.Aula01;
 import java.util.Scanner;
 
 public class ExemploOperadores {

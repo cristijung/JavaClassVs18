@@ -1,4 +1,4 @@
-package Aula02;
+package ParteI.Aula02;
 
 // anatomia de uma classe java
 public class PrimeiroExemploClasse {

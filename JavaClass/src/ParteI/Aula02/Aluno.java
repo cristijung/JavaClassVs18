@@ -1,4 +1,4 @@
-package Aula02;
+package ParteI.Aula02;
 
 import java.util.Scanner;
 public class Aluno {

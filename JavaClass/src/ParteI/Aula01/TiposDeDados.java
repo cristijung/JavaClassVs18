@@ -1,4 +1,4 @@
-package Aula01;
+package ParteI.Aula01;
 
 // classe com variáveis primitivas
 public class TiposDeDados {
